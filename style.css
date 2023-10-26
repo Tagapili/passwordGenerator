@@ -87,6 +87,10 @@ header {
   text-align: center;
   cursor: pointer;
 }
+.btn:focus{
+  background: hsl(0, 36%, 55%)
+
+}
 
 button[disabled] {
   cursor: default;
