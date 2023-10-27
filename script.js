@@ -25,14 +25,20 @@ function generatePassword() {
     alert("The input was invalid or not allowed. Try again.");
     generatePassword();
   }
+
+
   // 4. ask user to confirm whether or not to include 
   // lowercase, uppercase, numeric, and/or lower characters
   var pwLowCaseChoice = confirm("Do you like to include lowercase characters?");
   if (pwLowCaseChoice == true) {
     pwSource += lowercaseStr;
     console.log(pwSource)
-   
   }
+
+  if (pwLowCaseChoice == false){
+    console.log(pwSource + "false")
+  }
+
   // 5. ask user to confirm whether or not to include 
   // lowercase, uppercase, numeric, and/or uppercase characters
   var pwUpCaseChoice = confirm("Do you like to include Uppercase characters?");
@@ -40,6 +46,11 @@ function generatePassword() {
     pwSource += uppercaseStr;
     console.log(pwSource)
   }
+
+  if (pwUpCaseChoice == false){
+    console.log(pwSource + "false")
+  }
+
   // 6. ask user to confirm whether or not to include 
   // lowercase, uppercase, numeric, and/or numbers
   var pwNumberChoice = confirm("Do you like to include Numbers?");
@@ -47,12 +58,22 @@ function generatePassword() {
     pwSource += num;
     console.log(pwSource)
   }
+
+  if (pwNumberChoice == false){
+    console.log(pwSource + "false")
+  }
+
+
   // 7. ask user to confirm whether or not to include 
   // lowercase, uppercase, numeric, and/or special characters
   var pwSpecialChoice = confirm("Do you like to include special characters?");
   if (pwSpecialChoice == true) {
     pwSource += speChar;
     console.log(pwSource)
+  }
+
+  if (pwSpecialChoice == false){
+    console.log(pwSource + "false")
   }
 
   for (let i = 0; i < pwLength; i++) {
